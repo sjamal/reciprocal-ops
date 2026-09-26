@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
 .env
 .venv
 venv/
@@ -24,5 +25,5 @@ htmlcov/
 
 # Volatile verification state outputs
 tests/test_history.json
-src/medicine_wheel_ops/storage/state_history.json
+src/reciprocal_ops/storage/state_history.json
 sample_webhook_payload.json

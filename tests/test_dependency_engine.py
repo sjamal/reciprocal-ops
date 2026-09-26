@@ -1,7 +1,7 @@
 """Unit verification suite checking reciprocity mathematical models."""
 import pytest
-from medicine_wheel_ops.engines.base_engine import SystemMetrics
-from medicine_wheel_ops.engines.dependency_engine import CoDependencyEngine
+from reciprocal_ops.engines.base_engine import SystemMetrics
+from reciprocal_ops.engines.dependency_engine import CoDependencyEngine
 
 def test_balanced_node_calculation():
     engine = CoDependencyEngine(min_threshold=0.75)

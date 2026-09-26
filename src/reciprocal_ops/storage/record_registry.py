@@ -1,5 +1,5 @@
 """
-Data persistence registry tracking system architectural lineage and historical profiles.
+Data persistence registry tracking system architectural records and historical profiles.
 Establishes relational dependency mapping layers across system nodes.
 """
 
@@ -9,7 +9,7 @@ from typing import Dict, Any, Optional, List
 from pydantic import BaseModel, Field
 
 class SystemProfile(BaseModel):
-    """Schema boundary defining place-based system lineage and relational network links."""
+    """Schema boundary defining system records and relational network links."""
     system_id: str
     historical_baseline_years: int
     criticality_tier: int
@@ -17,10 +17,10 @@ class SystemProfile(BaseModel):
     dependencies: List[str] = Field(default_factory=list, description="Downstream relational system connections.")
     operational_history_notes: str
 
-class LineageRegistry:
+class RecordRegistry:
     """Manages file-based persistence for tracking infrastructure heritage baselines."""
 
-    def __init__(self, storage_path: str = "src/medicine_wheel_ops/storage/registry.json"):
+    def __init__(self, storage_path: str = "src/reciprocal_ops/storage/registry.json"):
         self.storage_path = storage_path
         self._initialize_storage()
 
@@ -30,7 +30,7 @@ class LineageRegistry:
                 json.dump({}, f)
 
     def register_profile(self, profile: SystemProfile) -> None:
-        """Persists an infrastructure profile into the lineage database registry."""
+        """Persists an infrastructure profile into the record registry."""
         with open(self.storage_path, "r") as f:
             data = json.load(f)
         

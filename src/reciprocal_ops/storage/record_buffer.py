@@ -1,5 +1,5 @@
 """
-Implements cyclical file-based lineage logging.
+Implements cyclical file-based record logging.
 Maintains system historical baselines using environment configuration windows.
 """
 
@@ -7,15 +7,15 @@ import json
 import os
 from typing import List, Dict, Any
 
-class HistoricalLineageBuffer:
+class HistoricalRecordBuffer:
     """Manages version-controlled telemetry windows without unmitigated storage expansion."""
 
-    def __init__(self, file_path: str = "src/medicine_wheel_ops/storage/lineage_history.json", max_window: int = None):
+    def __init__(self, file_path: str = "src/reciprocal_ops/storage/record_history.json", max_window: int = None):
         self.file_path = file_path
         
         # Pull dynamic sliding limit boundaries from environment configurations
         if max_window is None:
-            self.max_window = int(os.getenv("LINEAGE_WINDOW_MAX", 10))
+            self.max_window = int(os.getenv("RECORD_WINDOW_MAX", 10))
         else:
             self.max_window = max_window
             
@@ -33,7 +33,7 @@ class HistoricalLineageBuffer:
 
     def append_state(self, system_id: str, new_value: float) -> List[float]:
         """
-        Appends a performance value to a system's historical tracking lineage.
+        Appends a performance value to a system's historical tracking record.
         Enforces a strict sliding window threshold to prevent infinite disk bloat.
         """
         with open(self.file_path, "r") as f:

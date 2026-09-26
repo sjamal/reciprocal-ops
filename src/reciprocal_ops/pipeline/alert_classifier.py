@@ -4,13 +4,13 @@ Categorizes system anomalies into ecological states based on resource reciprocit
 """
 
 from pydantic import BaseModel
-from medicine_wheel_ops.telemetry.spike_detector import SpikeAssessmentResult
-from medicine_wheel_ops.pipeline.webwork_assessor import WebworkScore, WebworkAssessor
+from reciprocal_ops.telemetry.spike_detector import SpikeAssessmentResult
+from reciprocal_ops.pipeline.webwork_assessor import WebworkScore, WebworkAssessor
 
 class EcologicalAlert(BaseModel):
     """Schema representing a synthesized holistic system alert."""
     system_id: str
-    classification: str # ADAPTIVE_SHIFT, SYSTEMIC_DISRUPTION, ECOSYSTEM_TRAUMA
+    classification: str # ADAPTIVE_SHIFT, SYSTEMIC_DISRUPTION
     urgency: str        # LOW, MEDIUM, CRITICAL
     summary: str
 

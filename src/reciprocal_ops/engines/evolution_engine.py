@@ -46,7 +46,7 @@ class EcosystemSimulation:
 
     def _execute_adaptation_loop(self, agent: SimulationAgent) -> str:
         """
-        Instead of throwing a hard failure or crashing (The 'Eden Ecology' flaw),
+        Instead of throwing a hard failure or crashing (the static-equilibrium assumption),
         the agent dynamically sheds non-critical logic and self-heals.
         """
         agent.adaptation_count += 1

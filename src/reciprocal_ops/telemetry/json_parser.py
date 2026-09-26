@@ -5,7 +5,7 @@ or real enterprise REST API payloads into standardized SystemMetrics records.
 
 import json
 from typing import Dict, Any
-from medicine_wheel_ops.engines.base_engine import SystemMetrics
+from reciprocal_ops.engines.base_engine import SystemMetrics
 
 class JSONStreamParser:
     """Translates arbitrary external dictionary layouts into structured framework schemas."""

@@ -2,8 +2,8 @@
 Unit verification suite verifying the pluggable Data Ingestion engine contracts.
 """
 
-from medicine_wheel_ops.telemetry.hydrator import SyntheticHydrator, RealAPIHttpSource
-from medicine_wheel_ops.engines.base_engine import SystemMetrics
+from reciprocal_ops.telemetry.hydrator import SyntheticHydrator, RealAPIHttpSource
+from reciprocal_ops.engines.base_engine import SystemMetrics
 
 def test_synthetic_hydrator_emits_valid_metrics():
     hydrator = SyntheticHydrator()

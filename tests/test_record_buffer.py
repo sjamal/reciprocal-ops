@@ -1,13 +1,13 @@
 """
-Unit verification suite verifying cyclical lineage window rotation and data preservation bounds.
+Unit verification suite verifying cyclical record window rotation and data preservation bounds.
 """
 
 import os
-from medicine_wheel_ops.storage.lineage_buffer import HistoricalLineageBuffer
+from reciprocal_ops.storage.record_buffer import HistoricalRecordBuffer
 
-def test_cyclical_lineage_truncation():
+def test_cyclical_record_truncation():
     test_log = "tests/test_history.json"
-    logger = HistoricalLineageBuffer(file_path=test_log, max_window=3)
+    logger = HistoricalRecordBuffer(file_path=test_log, max_window=3)
     
     # Append values past max threshold window parameters
     logger.append_state("cluster-x", 10.0)

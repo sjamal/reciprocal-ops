@@ -1,13 +1,13 @@
 """
-Unit verification suite checking system lineage tracking and relational dependency data layers.
+Unit verification suite checking system record tracking and relational dependency data layers.
 """
 
 import os
-from medicine_wheel_ops.storage.lineage_registry import LineageRegistry, SystemProfile
+from reciprocal_ops.storage.record_registry import RecordRegistry, SystemProfile
 
 def test_profile_registration_lifecycle():
     test_db = "tests/test_registry.json"
-    registry = LineageRegistry(storage_path=test_db)
+    registry = RecordRegistry(storage_path=test_db)
     
     profile = SystemProfile(
         system_id="api-gateway-node",

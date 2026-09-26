@@ -3,10 +3,11 @@ requires = ["setuptools>=61.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "medicine-wheel-ops"
+name = "reciprocal-ops"
 version = "1.0.0"
-description = "A quantitative operations engine mapping Indigenous ecological stewardship onto enterprise systems."
+description = "An educational IT operations framework applying relational and reciprocal principles, inspired by Dr. Jennifer Grenz's Medicine Wheel for the Planet."
 readme = "README.md"
+requires-python = ">=3.11"
 authors = [{ name = "Sarosh Jamal", email = "sjamal@github.com" }]
 license = { text = "MIT" }
 classifiers = [
@@ -21,8 +22,11 @@ dependencies = [
     "gitpython>=3.1.40"
 ]
 
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
 [project.scripts]
-mw-ops = "medicine_wheel_ops.cli:main"
+recip = "reciprocal_ops.cli:main"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
@@ -33,4 +37,4 @@ pythonpath = ["src"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["medicine_wheel_ops*"]
+include = ["reciprocal_ops*"]

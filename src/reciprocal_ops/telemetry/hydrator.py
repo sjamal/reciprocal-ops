@@ -6,7 +6,7 @@ Enables seamless switching between synthetic noise generation and real system AP
 from typing import Protocol, List, Dict, Any
 import random
 from pydantic import BaseModel
-from medicine_wheel_ops.engines.base_engine import SystemMetrics
+from reciprocal_ops.engines.base_engine import SystemMetrics
 
 class DataIngestionSource(Protocol):
     """Abstract contract for system data inputs (Simulated, REST APIs, or DB streams)."""

@@ -2,7 +2,7 @@
 Unit verification suite for testing multi-agent adaptation and simulation resilience.
 """
 
-from medicine_wheel_ops.engines.evolution_engine import EcosystemSimulation
+from reciprocal_ops.engines.evolution_engine import EcosystemSimulation
 
 def test_agent_adaptation_under_stress():
     """Ensures nodes execute self-healing adaptation instead of hard-crashing under heavy load."""

@@ -2,7 +2,7 @@
 Implements relational co-dependency engines and system balance algorithms.
 """
 
-from medicine_wheel_ops.engines.base_engine import SystemMetrics, EngineProtocol
+from reciprocal_ops.engines.base_engine import SystemMetrics, EngineProtocol
 
 class CoDependencyEngine(EngineProtocol):
     """Calculates extraction indices to track balance and network load."""

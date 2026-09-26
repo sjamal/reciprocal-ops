@@ -3,7 +3,7 @@ Unit verification suite for checking the time-series metric anomaly spike calcul
 """
 
 import pytest
-from medicine_wheel_ops.telemetry.spike_detector import TelemetrySpikeDetector
+from reciprocal_ops.telemetry.spike_detector import TelemetrySpikeDetector
 
 def test_nominal_window_evaluation():
     detector = TelemetrySpikeDetector(deviation_threshold=2.0)

@@ -3,7 +3,7 @@ Unit verification suite for testing incoming external JSON payload translation w
 """
 
 import pytest
-from medicine_wheel_ops.telemetry.json_parser import JSONStreamParser
+from reciprocal_ops.telemetry.json_parser import JSONStreamParser
 
 def test_parse_nested_external_api_json():
     parser = JSONStreamParser()

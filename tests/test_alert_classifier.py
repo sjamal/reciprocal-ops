@@ -3,9 +3,9 @@ Unit verification suite for the Custom Alert Classification Trigger.
 """
 
 import pytest
-from medicine_wheel_ops.pipeline.alert_classifier import AlertClassifier
-from medicine_wheel_ops.telemetry.spike_detector import SpikeAssessmentResult
-from medicine_wheel_ops.pipeline.webwork_assessor import WebworkScore
+from reciprocal_ops.pipeline.alert_classifier import AlertClassifier
+from reciprocal_ops.telemetry.spike_detector import SpikeAssessmentResult
+from reciprocal_ops.pipeline.webwork_assessor import WebworkScore
 
 def test_classify_healthy_adaptive_shift():
     classifier = AlertClassifier()
